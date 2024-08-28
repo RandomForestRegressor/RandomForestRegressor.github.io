@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5144",
+      "name": "家纺家饰",
+      "font_class": "jiafangjiashi",
+      "unicode": "345e",
+      "unicode_decimal": 13406
+    }
+  ]
+}

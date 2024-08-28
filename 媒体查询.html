@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /*设备小于768加载样式*/
+            .box {
+                background-color: antiquewhite;
+            }
+
+            .p1 {
+                display: none;
+            }
+
+            .p2 {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 992px) and (min-width: 768px) {
+
+            /**/
+            .box {
+                background-color: pink;
+            }
+
+            .p1 {
+                display: none;
+            }
+
+            .p2 {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+
+            /*设备大于992加载样式*/
+            .box {
+                background-color: green;
+            }
+
+            .p1 {
+                display: block;
+            }
+
+            .p2 {
+                display: block;
+            }
+        }
+
+        .icon1 {
+            display: block;
+            width: 45px;
+            height: 45px;
+            background-image: url(./tp.png);
+            border: 1px solid red;
+            background-position: -15px -14px;
+        }
+
+        .icon2 {
+            display: block;
+            width: 45px;
+            height: 45px;
+            background-image: url(./tp.png);
+            border: 1px solid red;
+            background-position: -15px -14px;
+            animation: run 3s linear 0s infinite;
+        }
+
+        @keyframes run{
+            0%{
+                background-position: -15px -14px;
+            }
+            100%{
+                background-position: -15px 336px;
+            }
+        }
+
+        .home{
+            font-size: 80px;
+            color: #e1251b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <p class="p1">111</p>
+    <p class="p2">222</p>
+
+    <span class="icon1"></span>
+    <span class="icon2"></span>
+
+    <span class="iconfont icon-jiafangjiashi home"></span>
+</body>
+
+</html>

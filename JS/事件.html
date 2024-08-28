@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 点击事件 -->
+    <!-- html -->
+    <button onclick="htmlsj()">html</button>
+    <script>
+        function htmlsj() {
+            alert("点击了按钮")
+        }
+    </script>
+
+
+    <!-- Dom0 添加单个事件-->
+    <button id="btn">Dom0</button>
+    <script>
+        var btn = document.getElementById("btn")
+        btn.onclick = function () {
+            alert("点击了按钮")
+        }
+    </script>
+
+
+    <!-- Dom2 添加多个事件-->
+    <button id="bt">Dom2</button>
+    <script>
+        var btn = document.getElementById("bt")
+        btn.addEventListener("click", function () {
+            alert("点击了按钮")
+        })
+    </script>
+
+
+
+
+
+    <!-- 鼠标事件 -->
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: #758f7d;
+        }
+
+        .box5 {
+            width: 200px;
+            height: 200px;
+            background-color: #561f48;
+        }
+    </style>
+    <button id="btn0">单击</button>
+    <button id="btn1">双击</button>
+    <button id="btn2">鼠标按下</button>
+    <button id="btn3">鼠标抬起</button>
+    <div id="btn4" class="box1"></div>
+    <div id="btn5" class="box2"></div>
+    <div id="btn6" class="box3"></div>
+    <div id="btn7" class="box4"></div>
+    <div id="btn8" class="box5"></div>
+
+    <script>
+        var btn0 = document.getElementById("btn0")
+        var btn1 = document.getElementById("btn1")
+        var btn2 = document.getElementById("btn2")
+        var btn3 = document.getElementById("btn3")
+        var btn4 = document.getElementById("btn4")
+        var btn5 = document.getElementById("btn5")
+        var btn6 = document.getElementById("btn6")
+        var btn7 = document.getElementById("btn7")
+        var btn8 = document.getElementById("btn8")
+
+        btn0.onclick = function () {
+            alert("单击事件")
+        }
+
+        btn1.ondblclick = function () {
+            alert("双击事件")
+        }
+
+        btn2.onmousedown = function () {
+            alert("鼠标按下")
+        }
+
+        btn3.onmouseup = function () {
+            alert("鼠标抬起")
+        }
+
+        btn4.onmousemove = function () {
+            alert("鼠标移动")
+        }
+
+        btn5.onmouseenter = function () {
+            alert("鼠标进入")
+        }
+
+        btn6.onmouseleave = function () {
+            alert("鼠标离开")
+        }
+
+        btn7.onmouseover = function () {
+            alert("鼠标进入")
+        }
+
+        btn8.onmouseout = function () {
+            alert("鼠标离开")
+        }
+    </script>
+
+
+
+
+    <!-- 键盘事件 -->
+    <input type="text" id="usrname">
+    <input type="text" id="password">
+    <script>
+        var usrname = document.getElementById("usrname")
+        var password = document.getElementById("password")
+
+        usrname.onkeydown = function () {
+            console.log("按下了");
+        }
+
+        usrname.onkeyup = function (e) {
+            console.log(e.target.value);
+        }
+
+        usrname.onkeypress = function () {
+            console.log("keypress");
+        }
+
+        var password = document.getElementById('password')
+        password.onkeyup = function (e) {
+            //keycode代表每个按键的唯一标识
+            console.log(e.keyCode);
+            if (e.keyCode === 13) {
+                console.log('用户按了回车键');
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

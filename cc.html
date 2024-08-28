@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        h3{
+            color: aquamarine;
+            font-size: 30px;
+        }
+    </style> -->
+
+    <style>
+        * {
+            color: aqua;
+            font-size: 10px;
+        }
+
+        a {
+            color: blue;
+            font-size: 66px;
+        }
+
+        .conon {
+            color: coral;
+        }
+
+        .siz {
+            color: bisque;
+            font-size: 20px;
+        }
+
+        #text {
+            color: cornflowerblue;
+            font-size: 22px;
+        }
+
+        h1,
+        h2 {
+            color: coral;
+            font-size: 30px;
+        }
+
+        .ttt,
+        .ccc {
+            color: cornflowerblue;
+            font-size: 22px;
+        }
+
+        #write {
+            color: #f11325;
+            font-size: 12px;
+            font-weight: lighter;
+            /*bold加粗，400默认*/
+            font-style: italic;
+            /*斜体,normal正常*/
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 400px;
+            background-image: url(./水墨画.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            /*50% 50%*/
+        }
+
+        #txt {
+            text-align: left;
+            text-decoration: underline;
+            /*overline,line-through*/
+            text-transform: capitalize;
+            text-indent: 30px;
+        }
+
+        table,
+        td {
+            border: 3px solid red;
+            border-collapse: collapse;
+            /* width: 300px;
+            height: 100px; 
+            text-align: center; */
+            padding: 20px;
+            background-color: aqua;
+            color: aliceblue;
+        }
+
+        ul li {
+            color: #f11325;
+        }
+
+        div>ul {
+            color: #f11325;
+        }
+
+        h1+p {
+            color: red;
+        }
+
+        h5~p {
+            color: antiquewhite;
+        }
+
+        /* div {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            padding: 50px 10px;
+            border: 5px solid blue;
+            margin: 50px 10px;
+        } */
+
+        .contain {
+            width: 500px;
+            height: 500px;
+            background-color: #555;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contains {
+            width: 200px;
+            height: 300px;
+            background-color: #666;
+        }
+
+        .contains::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .boxs1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            flex: 3;
+            float: left;
+        }
+
+        .boxs2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            flex: 2;
+            float: left;
+        }
+
+        .boxs3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            flex: 1;
+            float: left;
+            bottom: 50px;
+        }
+
+        .boxs4 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 0, 200);
+            /* float: left; */
+            margin: 5px;
+            overflow: hidden;
+            clear: both;
+            z-index: 10;
+        }
+
+        #pos {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 0, 200);
+            position: fixed;/*relative,absolute*/
+            left: 50px;
+            top: 50px;
+            overflow: hidden;
+            clear: both;
+            border-radius: 20px 5px;
+            box-shadow: 10px 10px 20px #666;
+        }
+
+        img {
+            width: 300px;
+            float: left;
+        }
+    </style>
+    <link rel="stylesheet" href="./cc.css">
+</head>
+
+<body>
+    <h3>标题</h3>
+    <p style="color: blueviolet;font-size: 30px;">内联样式</p>
+    <p>外部样式</p>
+    <h3>内部样式</h3>
+    <p>跳转<a href="./hh.html">html</a>元素选择器</p>
+    <h1>全局选择器</h1>
+    <h2>全局选择器</h2>
+    <p class="conon">类选择器1</p>
+    <p class="conon siz">类选择器2</p>
+    <!-- id是唯一的 -->
+    <p id="text">id</p>
+
+    <h1>合并选择器</h1>
+    <h2>合并选择器</h2>
+    <p class="ttt">合并选择器class</p>
+    <p class="ccc">合并选择器class</p>
+    <p class="ccc">行内样式1000 > ID选择器100 > 类选择器10 > 元素选择器1</p>
+
+    <p id="write">字体属性</p>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <p id="txt">hello文本属性</p>
+
+    <table>
+        <tr>
+            <td>表格属性</td>
+            <td>表格属性</td>
+            <td>表格属性</td>
+        </tr>
+        <tr>
+            <td>表格属性</td>
+            <td>表格属性</td>
+            <td>表格属性</td>
+        </tr>
+        <tr>
+            <td>表格属性</td>
+            <td>表格属性</td>
+            <td>表格属性</td>
+        </tr>
+    </table>
+
+    <ul>
+        <li>后代选择器</li>
+        <li>后代选择器</li>
+        <li>后代选择器</li>
+        <div>
+            <p>hhh</p>
+            <ol>
+                <li>后代选择器</li>
+                <li>后代选择器</li>
+            </ol>
+        </div>
+    </ul>
+
+
+    <div>
+        <p>子代选择器</p>
+        <ul>
+            <li>caicai</li>
+        </ul>
+    </div>
+
+    <p>ppp</p>
+    <h1>相邻兄弟选择器</h1>
+    <p>ppp</p>
+    <p>ppp</p>
+
+    <h5>通用兄弟选择器</h5>
+    <p>ppp</p>
+    <p>ppp</p>
+    <p>ppp</p>
+
+    <div>盒子模型</div>
+
+    <div class="contain">
+        <div class="boxs1"></div>
+        <div class="boxs2"></div>
+        <div class="boxs3"></div>
+    </div>
+
+    <img src="./水墨画.webp" alt="">
+    <img src="./水墨画.webp" alt="">
+
+    <div class="contains">
+        <div class="boxs1"></div>
+        <div class="boxs2"></div>
+        <div class="boxs3"></div>
+        <div class="boxs4"></div>
+    </div>
+
+    <div id="pos"></div>
+</body>
+
+</html>

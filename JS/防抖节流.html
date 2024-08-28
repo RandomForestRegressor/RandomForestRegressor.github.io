@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 防抖 -->
+    <h3>hhh</h3>
+    <h3>hhh</h3>
+    <h3>hhh</h3>
+    <h3>hhh</h3>
+    <h3>hhh</h3>
+    <h3>hhh</h3>
+    <script>
+
+        function debounce(fn, delay) {
+            var timer = null
+            return function () {
+                if (timer) {
+                    clearTimeout(timer)
+                }
+                timer = setTimeout(fn, delay)
+            }
+        }
+
+        //滚动事件
+        window.onscroll = debounce(scrolHandle, 200)
+
+        function scrolHandle() {
+            // console.log("页面滚动了");
+            console.log(document.documentElement.scrollTop);
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 节流 -->
+    <script>
+
+        function thcory(fn, delay) {
+            var vaild = true
+            return function () {
+                if (!vaild) {
+                    return false
+                }
+                vaild = false
+                setTimeout(function () {
+                    fn()
+                    vaild = true
+                }, delay)
+            }
+        }
+
+        window.onscroll = thcory(scrolHandle,2000)
+
+        function scrolHandle() {
+            // console.log("页面滚动了");
+            console.log(document.documentElement.scrollTop);
+        }
+    </script>
+</body>
+
+</html>

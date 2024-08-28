@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #somediv {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!--setTimeout延迟执行  -->
+    <script>
+        var timer = setTimeout(function () {
+            console.log("延迟3秒执行");
+        }, 3000)
+
+        //取消定时器
+        clearTimeout(timer)
+
+        var name = "iwen"
+        var user = {
+            name: "ititit",
+            getName: function () {
+                var that = this
+                setTimeout(function () {
+                    console.log(that.name);
+                }, 1000)
+            }
+        }
+        user.getName()
+
+    </script>
+
+
+
+
+
+    <!--setinterval循环执行  -->
+    <div id="somediv"></div>
+    <script>
+        var somediv = document.getElementById("somediv")
+        var opacity = 1;
+        var fade = setInterval(function () {
+            if (opacity > 0) {
+                opacity -= 0.05
+                somediv.style.opacity = opacity
+            } else {
+                clearInterval(fade)
+                // opacity = 1
+            }
+        }, 100)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="usrname">
+    <input type="text" id="password">
+    <script>
+        var usrname = document.getElementById("usrname")
+        var password = document.getElementById("password")
+
+        usrname.oninput = function (e) {
+            console.log(e.target.value);
+        }
+
+        usrname.onselect = function () {
+            console.log("已选中");
+        }
+
+        //失去焦点或回车时触发
+        password.onchange = function (e) {
+            console.log(e.target.value);
+        }
+
+    </script>
+
+
+
+
+
+<!-- action="服务器地址" -->
+    <form id="myform" onsubmit="SubmitHandle">
+        <input type="text" name="name">
+        <button id="reser">重置</button>
+        <button >提交</button>
+    </form>
+
+    <script>
+        var reser = document.getElementById("reser")
+        var myform = document.getElementById("myform")
+        reser.onclick = function () {
+            myform.reset()          //清空表单
+        }
+
+        function SubmitHandle() {
+            console.log("1111");
+        }
+    </script>
+</body>
+
+</html>
