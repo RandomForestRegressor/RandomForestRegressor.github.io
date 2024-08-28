@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mya{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0,0,0,0.4);
+            animation: myAnimal 3s linear 0s infinite;
+        }
+
+        .mya:hover{
+            /* color: coral; */
+            animation-play-state: paused;
+        }
+
+        @keyframes myAnimal{
+            0%{
+                width: 0px;
+                background-color: red;
+            }
+            30%{
+                width: 400px;
+                background-color: green;
+            }
+            60%{
+                width: 200px;
+                background-color: blue;
+            }
+            100%{
+                width: 0px;
+                background-color: red;
+            }
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 40px auto;
+            background-color: #174f62;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+            animation: breathe 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes breathe{
+            0%{
+                opacity: 0.2;
+                box-shadow: 0 1px 2px rgba(255,255,255,0.1);
+            }
+            50%{
+                opacity: 0.5;
+                box-shadow: 0 1px 2px rgba(18,190,84,0.76);
+            }
+            100%{
+                opacity: 1;
+                box-shadow: 0 1px 2px rgba(59,255,255,0.4);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mya"></div>
+    <div class="box"></div>
+</body>
+</html>
